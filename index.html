@@ -20,26 +20,42 @@
     </head>
 
     <style>
+         @font-face {
+            font-family: "lato-header";
+           
+            src: url(fonts/Lato/Lato-Black.ttf);
+
+            }
+
+        @font-face {
+            font-family: "playfair-header";
+            src: url(fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf);
+            }
+
+        .h2{
+            font-size: 30px;
+        }
+
+        .searchbar{
+            justify-content: end;
+        }
+        
         .container-fluid
         {
           background-color: #4682B4;
           text-align: start;
           color:black;
-          align-items: start;
-          font-size: 36px;
           
+          
+          font-family:"playfair-header" ;
+         
+        
         }
 
-        @font-face {
-            font-family: "press_start_2p";
-            src: url(fonts/press_start_2p/PressStart2P-Regular.ttf);
 
-            }
+      
 
-        @font-face {
-            font-family: "russo_one";
-            src: url(fonts/russo_one/RussoOne-Regular.ttf);
-            }
+       
         body
         {
             background-color: #192E3F;
@@ -49,44 +65,46 @@
       </style>
 
        <div class="container-fluid">
-       
-       
 
-      
+            <div class="d-flex align-content-center  flex-wrap bd-highlight mb-3" style="height: 80px ;">
+                <div class="p-2 bd-highlight">
+                    
+                    <p class="display-7">start</p>
+                </div>
 
-        <div class="d-inline-flex p-2 bd-highlight">
-            <div class="col"> <h1>start</h1> </div>
-            <div class="col"> <h1>Kategorier</h1> </div>
-            <div class="col-inline">  <h1>Kontakta Oss</h1> </div>
-            <div class="justify-content-end">
-                <div class="col"> <h1>Kundvagn</h1> </div>
-                <div class="col">  <h1>Login</h1> </div>
+                <div class="p-2 bd-highlight">
+                    <p class="display-7">Kategorier</p>
+                </div>
+
+                <div class="me-auto p-2 bd-highlight">
+                
+                    <p class="display-7">Kontakta Oss</p>
+                </div>
+
+                <form class="me-auto d-flex align-content-center   bd-highlight mb-3">
+
+                    <div class="searchbar" alt="searchbar" id="searchbar">
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" style="height: 30px;">
+                    </div>
+                 
+                    <!-- 
+                     <button class=" btn btn-outline-success" type="submit" style="height: 30px;" >Search</button>
+                    -->
+                   
+                  </form>
+                <div class="p-2 bd-highlight">
+                    <p class="display-7">Kundvagn</p>
+                    
+                </div>
+                <div class="p-2 bd-highlight">
+                    <p class="display-7">Login</p>
+                    
+                </div>
             </div>
-        </div>
         
-        <div class="d-inline-flex p-2 bd-highlight justify-content-end">
-           
-                <div class="col"> <h1>Kundvagn</h1> </div>
-                <div class="col">  <h1>Login</h1> </div>
-            
-        </div>
-         
-    
-           
           
-         
-            <!-- 
-               
-                Login
-
-             <div class="col-sm-4">
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              </div>
-            -->
-           
-
+      
+          
        </div>
 
        
