@@ -24,7 +24,7 @@
         */
          @font-face {
             font-family: "lato-header";
-           
+            font-size: 1.75em;
             src: url(fonts/Lato/Lato-Black.ttf);
 
             }
@@ -32,29 +32,32 @@
         font-family: "lato-body";
         
         src: url(fonts/Lato/Lato-Regular.ttf);
+        font-size: 1.25em;
 
         }
 
         @font-face {
             font-family: "playfair-header";
+            font-size: 1.75em;
             src: url(fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf);
             }
 
 
 
         .h2{
-            font-size: 30px;
+            font-size: 1.75em;;
             
         }
 
         .h3{
             
-            font-size: 20px;
+            font-size: 1.25em;
             
         }
 
         .h4{
-            font-size: 16px;
+            font-size: 1em;
+
         }
         /*Navbar styling*/
         .searchbar{
@@ -110,17 +113,19 @@
         }
 
         .nav-item:hover{
-            background-color: #3c6f99;
+            background-color: #3c6f99 ;
         }
 
         .nav-item:active{
-            background-color: #335f83;
+            background-color: #335f83 ;
         }
+
+       
 
        
         body
         {
-            background-color: #192E3F;
+            background-color: #192E3F !important;
             overflow: hidden;
         }
 
@@ -142,6 +147,129 @@
         main
         */
 
+        /*Categories dropdows */
+
+        .categories-flexbox{
+            display: flex;
+            width: 80vw;
+            flex-direction: row;
+            column-gap: 1%;
+
+            margin-top:2% ;
+            margin-bottom: 2%;
+            margin-left: 11vh;
+          
+        }
+        .btn-primary{
+        background-color: #4682B4 !important;
+        border-style:solid !important;
+        border-color: black !important;
+        color:black !important; 
+        }
+
+        .dropdown-item{
+            background-color: #4682B4 !important;
+        }
+
+        .dropdown-item:hover{
+            background-color: #3c6f99 !important;
+            
+        }
+        .dropdown-item:active{
+            background-color: #335f83 !important;
+        }
+
+        .dropdown-menu{
+            background-color: #4682B4 !important;
+            /*
+            font-family:"playfair-header" !important;
+            font-size: 1.25em !important;
+            */
+        }
+
+        /*Categories Body*/
+        .display-books{
+            display:flex;
+            flex-direction: column;
+            background-color: #4682B4;
+            width: 89vw;
+            height:75vh;
+            margin-left: 11vh;
+        }
+
+        .display-books-top{
+            display: flex;
+            flex-direction: row;    
+            align-items: center;
+            color:black;
+            padding-top: 1%;
+            padding-left: 2.2%;
+            column-gap: 0.5vh;
+            font-family: "lato-header";
+            font-size: 1em;
+        }
+
+        .shoppingcart{
+            width: 2vw;
+            height: 2vw;
+        }
+
+        .display-books-bottom{
+            display: flex;
+            flex-direction: row;
+            column-gap: 1%;
+            padding-left: 2.2%;
+            position: relative;
+        }
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            width: 12vw;
+            height: auto;
+            row-gap: 2vh;
+            margin-top: 11vh;
+            
+        }
+
+        .book{
+            
+            width: 10vw;
+            height: 29.11vh;
+            border-style: solid;
+            border-radius: 3px;
+            
+        }
+       
+        .purchase{
+            background-color:#335F83;
+            
+            color:black;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: solid;
+            border-radius: 3px;
+            border-color: black;
+            width: 10vw;
+            height: 5vh;
+
+            font-family: "lato-body";
+            font-size: 1.25em;
+        }
+        .purchase:hover{
+            background-color: #192E3F;
+        }
+
+        .purchase:active{
+            background-color: #192e3f;
+            color: #D6E9F9;
+        }
+
+        p{
+            margin: 0;
+        }
+      
     </style>
 
     <body>
@@ -208,6 +336,7 @@
                             <a href="purchase.html">
                                 
                                 <img class="shoppingcart" src="Bilder/shoppingcart.png" alt="shoppingcart-image" width="100%" height="100%">
+                                
                                <!--
                                 Kundvagn
                                 -->
@@ -238,19 +367,176 @@
 
         </header>
         <main>
+             <!--Choose categories for books here-->
             <div class="categories-flexbox">
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      Danger
+                      Språk
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                   
+                      <li><a class="dropdown-item" href="#">Svenska</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      <li><a class="dropdown-item" href="#">Engelska</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Finska</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Visa Alla</a></li>
                     </ul>
-                  </div>
+                </div>
+               
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Genre
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                      <li><a class="dropdown-item" href="#">Dramatik</a></li>
+                      <li><a class="dropdown-item" href="#">Science fiction</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Visa Alla</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Format
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Pocket</a></li>
+                      <li><a class="dropdown-item" href="#">Storböcker  </a></li>
+                      <li><a class="dropdown-item" href="#">E-bok</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Visa Alla</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Läsålder
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">0-3 år</a></li>
+                      <li><a class="dropdown-item" href="#">3-6 år  </a></li>
+                      <li><a class="dropdown-item" href="#">6-9</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Visa Alla</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pris
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Under 100kr</a></li>
+                      <li><a class="dropdown-item" href="#">Under 200kr </a></li>
+                      <li><a class="dropdown-item" href="#">Under 400kr</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Manuell inmatning</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tidsperiod
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">ca 500 e.v.t - 1500</a></li>
+                      <li><a class="dropdown-item" href="#">ca 500 e.v.t -1000 e.v.t </a></li>
+                      <li><a class="dropdown-item" href="#">Förhistorisk tid</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Manuell inmatning</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Geografisk plats
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Afrika</a></li>
+                      <li><a class="dropdown-item" href="#">Asien</a></li>
+                      <li><a class="dropdown-item" href="#">Europa</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Visa alla</a></li>
+                    </ul>
+                </div>  
+            </div>
+
+            <!--Display books here-->
+
+            <div class="display-books">
+                <div class="display-books-top">
+                    <div class=" display-books-image">
+                        <img class="shoppingcart" src="Bilder/four-rounded-squares-button_icon.png" alt="Display the amount of books" width="100%" height="100%">
+                    </div>
+                    <p>
+                        <h3>
+                            Resultat
+                        </h3>
+                    </p>
+                </div>
+                <div class="display-books-bottom">
+                    <div class="item">
+                        <img class="book" src="Bilder/drJ.png" alt="Dr Jekyll & Mr Hyde" width="100%" height="100%">
+                        <button class="purchase">
+                            <p><h3>
+                                Köp
+                            </h3></p>
+                        </button>
+                    </div>
+                    <div class="item">
+                        <img class="book" src="Bilder/faust.png" alt="Faust" width="100%" height="100%">
+                        <button class="purchase">
+                            <p><h3>
+                                Köp
+                            </h3></p>
+                        </button>
+                    </div>
+                    <div class="item">
+                        <img class="book" src="Bilder/skin.png" alt="Skinn" width="100%" height="100%">
+                        <button class="purchase">
+                            <p><h3>
+                                Köp
+                            </h3></p>
+                        </button>
+                    </div>
+                    <div class="item">
+                        <img class="book" src="Bilder/vilo.png" alt="Vilospår" width="100%" height="100%">
+                        <button class="purchase">
+                            <p><h3>
+                                Köp
+                            </h3></p>
+                        </button>
+                    </div>
+                    <div class="item">
+                        <img class="book" src="Bilder/pa.png" alt="På västfronten intet nytt" width="100%" height="100%">
+                        <button class="purchase">
+                            <p><h3>
+                                Köp
+                            </h3></p>
+                        </button>
+                    </div>
+                    <div class="item">
+                        <img class="book" src="Bilder/addicted.png" alt="addicted to anxiety" width="100%" height="100%">
+                        <button class="purchase">
+                            <p><h3>
+                                Köp
+                            </h3></p>
+                        </button>
+                    </div>
+                    <div class="item">
+                        <img class="book" src="Bilder/dr.png" alt="Doktor Glas" width="100%" height="100%">
+                        <button class="purchase">
+                            <p><h3>
+                                Köp
+                            </h3></p>
+                        </button>
+                    </div>
+                    
+                </div>
             </div>
         </main>
         <footer>
