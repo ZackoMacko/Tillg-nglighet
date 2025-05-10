@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Bokhandel</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,6 +16,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+         <link rel="shortcut icon" href="/Bilder/custom/bookshelf-white.png"/>
     </head>
 
     <style>
@@ -35,9 +36,12 @@
         @font-face {
             font-family: "playfair-header";
             src: url(fonts/Playfair_Display_SC/PlayfairDisplaySC-Black.ttf);
-            }
+        }
 
-
+        a{
+            text-decoration: none;
+            color: black !important;
+        }
 
         .h2{
             font-size: 30px;
@@ -47,7 +51,7 @@
         .h3{
             
             font-size: 20px;
-            
+            color: black !important;
         }
 
         .h4{
@@ -132,6 +136,115 @@
             width: 2vw;
             height: 2vw;
         }
+
+        /*Body*/
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: 90vh;
+        }
+
+        .purchase-simple-overview{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            background-color:#ACC7DD ;
+            width: 80vw;
+            height: 80vh;
+            border-radius: 0.8em;
+            padding-left: 1%;
+            padding-right: 1%;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            
+        }
+
+        .purchase-simple-overview-left{
+            display: flex;
+            flex-direction: column;
+            width: 27vw;
+            height: 30vh;
+            border-style: solid;
+            border-radius: 0.5em;
+            row-gap: 0.1em;
+            background-color: #D6E9F9;
+            z-index: 2;
+
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+
+        }
+
+        .total{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            column-gap: 5%;
+        }
+        .item0, .item1, .item2, .item3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .purchase-simple-overview-right{
+            display: flex;
+            column-gap: 1em;
+            height: 25vh;
+            width: 37vw;
+            align-items: end;
+            z-index: 2;
+        }
+
+        .continue-browsing{
+            width: 16vw;
+            height: 6vh;
+            background-color: #87AECE ;
+            border-style: solid;
+            border-radius: 1em;
+            
+        }
+
+        .continue-browsing:hover{
+            background-color: #3c6f99;
+        }
+        
+        .continue-browsing:active{
+            background-color: #335f83;
+        }
+
+        .to-checkout{
+            width: 16vw;
+            height: 6vh;
+            background-color: #D6E9F9;
+            border-style: solid;
+            border-radius: 1em;
+            border-width: 0.11em;
+            object-fit:contain;
+        }
+
+        .to-checkout:hover{
+            background-color: #c1d2e0;
+        }
+
+        .to-checkout:active{
+            background-color: #abbac7;
+        }
+
+        .image-books{
+            position: absolute;
+            top:20vh;
+            z-index: 0;
+            width: 78vw;
+            height: 50vh;
+            
+
+        }
+        
     </style>
 
     <body>
@@ -232,59 +345,57 @@
         </header>
         <main>
 
-            <form>
-                <!-- Email input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="email" id="form2Example1" class="form-control" />
-                    <label class="form-label" for="form2Example1">Email address</label>
+            <div class="purchase-simple-overview">
+                <div class="image-books">
+                     <img class="books" src="Bilder/custom/books2.svg" alt="flying books image" width="100%" height="100%" >
                 </div>
+                <div class="purchase-simple-overview-left">
+                    <h2>Din varukorg</h2>
+                    
 
-                <!-- Password input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="password" id="form2Example2" class="form-control" />
-                    <label class="form-label" for="form2Example2">Password</label>
-                </div>
-
-                <!-- 2 column grid layout for inline styling -->
-                <div class="row mb-4">
-                    <div class="col d-flex justify-content-center">
-                    <!-- Checkbox -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                        <label class="form-check-label" for="form2Example31"> Remember me </label>
-                    </div>
+                    <div class="item0">
+                        <p>Bok 1</p>
+                        <p> 150 kr</p>
                     </div>
 
-                    <div class="col">
-                    <!-- Simple link -->
-                    <a href="#!">Forgot password?</a>
+                    <div class="item1">
+                         <p>Bok 2</p>
+                        <p> 150 kr</p>
                     </div>
+
+                    <div class="item2">
+                         <p>Bok 3</p>
+                         <p> 150 kr</p>
+                    </div>
+
+                    <div class="total">
+                        <h1>Totalt belopp:</h1>
+                        <h1>450 kr</h1>
+                    </div>
+
+                </div>
+                <div class="purchase-simple-overview-right">
+                    <button class="continue-browsing">
+                         <h3>Fortsätt handla</h3>
+                    </button>
+                    <button class="to-checkout">
+                        <a href="transaction.html">
+                             <h3>Till betalning</h3>
+                        </a>
+                       
+                        <!--
+                         <a href="transaction.html"><p class="display-7">
+                                Start
+                            </p></a>
+                        -->
+                        
+                    </button>
+
+                   
                 </div>
 
-                <!-- Submit button -->
-                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
-
-                <!-- Register buttons -->
-                <div class="text-center">
-                    <p>Not a member? <a href="#!">Register</a></p>
-                    <p>or sign up with:</p>
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                    </button>
-
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                    </button>
-
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                    </button>
-
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                    </button>
-                </div>
-                </form>
+            </div>
+            
 
         </main>
         <footer>
