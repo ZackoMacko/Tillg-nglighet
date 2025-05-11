@@ -85,9 +85,7 @@
 
       
 
-        .d-flex{
-            
-        }
+        
 
         .display-7{
             
@@ -135,6 +133,85 @@
             width: 2vw;
             height: 2vw;
         }
+
+        /*body*/
+
+        main{
+           
+
+            display: flex;
+            flex-direction: row;
+          
+          
+            justify-content: center;
+            margin-top: 7vh;
+        }
+        .confirm-transaction{
+            display: flex;
+            flex-direction: row;
+            background-color: #ACC7DD;
+            width: 37vw;
+        
+            margin-left: 1em;
+        
+
+            padding: 1em;
+            padding-bottom: 10em;
+            
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .confirm-transaction-left{
+            padding-top: 10vh;
+        }
+
+        .confirm-transaction-right{
+            padding-top: 10vh;
+            padding-right: 15em;
+        }
+
+        .confirm-transaction-header{
+            position: absolute;
+        }
+
+
+         .buttons{
+            display: flex;
+            flex-direction: row;
+            width: 40vw;
+            height: 5vh;
+            column-gap: 1.4em;
+            margin-top: 2em;
+            position: absolute;
+            bottom: 1vh;
+        }
+
+        .go-back{
+            background-color: #87AECE;
+            border-radius: 0.5em;
+            border-color: black;
+            border-width: 3px;
+
+            width: 10vw;
+        }
+        .go-back:hover{
+            background-color: #3C6F99;
+         
+        }
+
+        .go-back:active{
+        background-color: #335F83;
+        
+        }
+       
+        .finalize-transaction{
+            background-color: #D6E9F9;
+            border-radius: 0.5em;
+            border-color: black;
+            border-width: 3px;
+            width: 10vw;
+        }
     </style>
 
     <body>
@@ -171,7 +248,7 @@
     
                     <div class="me-auto p-2 bd-highlight">
                         <button class="nav-item">
-                            <a href="contact.html"><p class="display-7">
+                            <a href="contact.html"><p class="display-7" style="display: none;">
                                 Kontakta Oss
                             </p></a>
                             <!--
@@ -233,7 +310,57 @@
               
            </div>
         </header>
-        <main></main>
+        <main>
+            
+            <div class="confirm-transaction">
+                <div class="confirm-transaction-header">
+                    <h3>Personuppgifter & Kort Information</h3>
+                </div>
+            
+                <div class="confirm-transaction-left">
+                    <div class="full-name">
+                        <p>Förnamn:</p>
+                        <p>Efternamn:</p>
+                       
+                    </div>
+                    <div class="adress-details">
+                        <p>Land:</p>
+                        <p>Ort:</p>
+                        <p>Postnummer:</p>
+                    </div>
+                    <div class="other">
+
+                    </div>
+                </div>
+                 <div class="confirm-transaction-right">
+                    <p>Betalningsmetod:</p>
+                    <p>Kortnummer:</p>
+                    <p>Månad/år:</p>
+                    <p>CVC/CVV:</p>
+
+                   
+                </div>
+                 <div class="buttons">
+                      
+                        <button class="go-back">
+                        <a href="purchase.html"><p class="display-7">
+                            Gå tillbaka
+                            
+                            </p></a>
+                        </button>
+                        <button class="finalize-transaction">
+                            <a href="transaction-confirmation-finalize.html"><p class="display-7">
+                            Bekräfta beställning
+                            
+                            </p></a>
+                    
+                        </button>
+                    </div>
+
+                 
+            </div>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
