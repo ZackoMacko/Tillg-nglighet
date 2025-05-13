@@ -16,7 +16,8 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-         <link rel="shortcut icon" href="/Bilder/custom/bookshelf-white.png"/>
+        <link rel="shortcut icon" href="/Bilder/custom/bookshelf-white.png"/>
+        <script src="script.js" defer></script>
     </head>
 
     <style>
@@ -145,6 +146,7 @@
             align-items: center;
             width: auto;
             height: 90vh;
+            position: relative;
         }
 
         .purchase-simple-overview{
@@ -185,8 +187,19 @@
             flex-direction: row;
             justify-content: space-between;
             column-gap: 5%;
+            position: absolute;
+            bottom:32%;
+            width: 26vw;
         }
-        .item0, .item1, .item2, .item3 {
+        .pendingpurchaseditem{
+            display: flex;
+            justify-content: space-between;
+        }
+        .pendingpurchaseditem1{
+            display:none;
+            justify-content: space-between;
+        }
+        .pendingpurchaseditem2{
             display: flex;
             justify-content: space-between;
         }
@@ -353,22 +366,22 @@
                     <h2>Din varukorg</h2>
                     
 
-                    <div class="item0">
+                    <div class="pendingpurchaseditem" id="PPI0">
                         <p>Bok 1</p>
-                        <p> 150 kr</p>
+                        <p>150 kr</p>
                     </div>
 
-                    <div class="item1">
+                    <div class="pendingpurchaseditem1" id="PPI1">
                          <p>Bok 2</p>
                         <p> 150 kr</p>
                     </div>
 
-                    <div class="item2">
+                    <div class="pendingpurchaseditem1" id="PPI2">
                          <p>Bok 3</p>
                          <p> 150 kr</p>
                     </div>
 
-                    <div class="total">
+                    <div class="total" id="total">
                         <h1>Totalt belopp:</h1>
                         <h1>450 kr</h1>
                     </div>
