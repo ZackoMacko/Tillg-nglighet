@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async function () {
        
         document.getElementById("PPI0").firstElementChild.textContent = pendingPurchasedBookText;
         total.lastElementChild.innerHTML = `<h2> ${150} Kr</h2>`;
-        console.log(pendingPurchasedBook.length);
+        
     }
     /**
      * const pendingPurchasedBooks = localStorage.getItem("selectedBooks")
